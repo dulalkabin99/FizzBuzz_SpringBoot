@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset=" UTF-8"/>
+    <title>Title</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{/process}"
+      th:object="${nums}" method="post">
+    Start number: <input type="number" th:field="*{start}"/>
+    <span th:if="${#fields.hasErrors('start')}" th:errors="*{start}"></span><br/>
+
+    Enter number: <input type="number" th:field="*{end}"/>
+    <span th:if="${#fields.hasErrors('end')}" th:errors="*{end}"></span><br/>
+
+
+    <input type="submit" value="Play" />
+
+
+</form>
+
+
+</body>
+</html>

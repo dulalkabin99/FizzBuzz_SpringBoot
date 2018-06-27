@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset=" UTF-8"/>
+    <title>Title</title>
+</head>
+
+<body>
+<a href="/">Play Again</a>
+
+<div th:each="res : ${myres}">
+    <p th:text="${res}"></p>
+</div>
+
+
+</body>
+</html>
